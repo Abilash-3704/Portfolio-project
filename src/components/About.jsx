@@ -1,44 +1,60 @@
-import React,{useEffect} from 'react';
-import AOS from "aos";
-import "aos/dist/aos.css";
-
+import React, {useEffect} from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import webpic from '../images/webpic.jpeg';
 export default function About() {
-    useEffect(()=>{
-        AOS.init()
-    },[])
-    return (
-        <>
-        
-        <div className='about' id='about'
-        data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in" data-aos-duration="1000" data-aos-once style={{overflowX:'hidden'}}>
-            <h1>ABOUT</h1>
+  useEffect(() => {
+    AOS.init();
+  }, []);
+  return (
+    <>
+      <div
+        className="about"
+        id="about"
+        data-aos="fade-up"
+        data-aos-offset="200"
+        data-aos-easing="ease-in"
+        data-aos-duration="1000"
+        data-aos-once
+        style={{overflowX: 'hidden'}}>
+        <h1>ABOUT</h1>
+        <p>
+          Hi,I am Abilash from Chennai currenty an undergraduate student at BITS
+          Pilani,Hyderabad campus pursuing Electrical and Electronics
+          Engineering. I am passionate about the exciting world of software
+          development. My journey in this field began with a strong interest in
+          web development and app development.
+        </p>
+        <div className="bio">
+          <div className="bio-image">
+            <img
+              src={webpic}
+              //   src="../images/coffin.png"
+              alt=""
+            />
+          </div>
+          <div className="bio-data">
+            {/* <h2>Web Developer.</h2> */}
+            {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> */}
+            <ul>
+              <li>Birthday: 3 July 2004</li>
+              <li>Age: 19</li>
+
+              <li>Degree: Bachelors</li>
+              <li>Phone: 7299012957</li>
+              <li>Email: kmabilash3704@gmail.com </li>
+              <li>City: Hyderabad,India</li>
+            </ul>
             <p>
-                Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.
+              I am excited about the possibilities that software development
+              holds, and I am eager to collaborate with like-minded individuals
+              and organizations to create remarkable digital experiences. Let's
+              embark on this journey together and build a better future through
+              the power of code!
             </p>
-            <div className="bio">
-                <div className="bio-image">
-                    <img src="https://bootstrapmade.com/demo/templates/MyResume/assets/img/profile-img.jpg" alt="" />
-                </div>
-                <div className="bio-data">
-                    <h2>Web Developer.</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <ul>
-                        <li>Birthday: 1 May 1995</li>
-                        <li>Age: 30</li>
-                        <li>Website: www.example.com</li>
-                        <li>Degree: Bachelors</li>
-                        <li>Phone: +123 456789</li>
-                        <li>Email: email@example.com </li>
-                        <li>City: New York,USA</li>
-                        <li>Freelance: Available</li>
-                    </ul>
-                    <p>
-                        Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis. Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium dolores.
-                    </p>
-                </div>
-            </div>
-            
+          </div>
         </div>
-        </>
-    )
+      </div>
+    </>
+  );
 }
